@@ -42,3 +42,9 @@ for noun in range(100):
       print(noun * 100 + verb)
 
 # %%
+import matplotlib.pyplot as plt
+nouns = range(100)
+verbs = range(100)
+for verb in verbs:
+  y = [run(noun, verb) for noun in nouns]
+  plt.plot(nouns, y)
