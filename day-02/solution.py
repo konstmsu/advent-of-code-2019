@@ -18,12 +18,13 @@ def run(noun, verb, codes):
     if op == 99:
       return c[0]
 
-    a = c[p+1:p+3]
+    a1 = c[p+1]
+    a2 = c[p+2]
 
     if op == 1:
-      v = np.sum(c[a])
+      v = a1 + a2
     elif op == 2:
-      v = np.prod(c[a])
+      v = a1 * a2
     else:
       raise Exception()
 
@@ -36,6 +37,7 @@ print(run(12, 2, codes))
 # 12490719 is correct
 
 #%%
+%%timeit
 for noun in range(100):
   for verb in range(100):
     if run(noun, verb, codes) == 19690720:
