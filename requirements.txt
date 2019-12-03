@@ -3,3 +3,4 @@ notebook
 matplotlib
 pylint
 autopep8
+rope
