@@ -5,7 +5,6 @@ with open('day-01/input') as file:
   masses = np.array([int(a) for a in file.readlines()])
 
 print(sum(masses // 3 - 2))
-# 3338004 is too high
 
 #%%
 total = np.zeros_like(masses)

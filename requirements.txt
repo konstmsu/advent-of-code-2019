@@ -1,3 +1,5 @@
 numpy
 notebook
 matplotlib
+pylint
+autopep8
