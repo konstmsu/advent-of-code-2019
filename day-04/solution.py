@@ -4,18 +4,15 @@
 
 def might_be_password(v):
     sv = str(v)
-    for c in range(len(sv) - 1):
-        if int(sv[c]) > int(sv[c+1]):
-            #print(sv, sv[c], sv[c+1])
-            return False
-
+    non_decreasing = True
     has_duplicate = False
     for c in range(len(sv) - 1):
+        if int(sv[c]) > int(sv[c+1]):
+            non_decreasing = False
         if sv[c] == sv[c+1]:
             has_duplicate = True
-            break
 
-    if has_duplicate:
+    if has_duplicate and non_decreasing:
         return True
 
     return False
